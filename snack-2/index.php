@@ -21,17 +21,17 @@ $name_to_check = $_GET['name'];
 $age_to_check = $_GET['age'];
 
 // controllo email
-// Se la mail non ha la chiocciola oppure non ha il punto scriviamo KO, altrimenti scriviamo OK.
+// Se la mail non ha la chiocciola.
 $test_mail_at = strpos($mail_to_check, '@');
-// Se la mail non ha la chiocciola oppure non ha il punto scriviamo KO, altrimenti scriviamo OK.
+// Se la mail non ha il punto.
 $test_mail_dot = strpos($mail_to_check, '.');
 
 // controllo nome
-// se il nome inserito non è più lungo di 3 caratteri scriviamo KO, altrimenti scriviamo OK.
+// se il nome inserito non è più lungo di 3 caratteri.
 $test_name = strlen($name_to_check);
 
 // controllo età
-// se l'età inserita non è un numero scriviamo KO, altrimenti scriviamo OK.
+// se l'età inserita non è un numero.
 $test_age = is_nan($age_to_check);
 
 ?>
@@ -76,7 +76,6 @@ $test_age = is_nan($age_to_check);
     var_dump($mail_error);
     var_dump($name_error);
     var_dump($age_error);
-
     var_dump($total_error); 
     ?> -->
 </body>
