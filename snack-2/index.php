@@ -33,13 +33,7 @@ $test_name = strlen($name_to_check);
 // controllo età
 // se l'età inserita non è un numero scriviamo KO, altrimenti scriviamo OK.
 $test_age = is_nan($age_to_check);
-
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
