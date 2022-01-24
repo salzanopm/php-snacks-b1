@@ -33,7 +33,10 @@ $test_name = strlen($name_to_check);
 // controllo età
 // se l'età inserita non è un numero scriviamo KO, altrimenti scriviamo OK.
 $test_age = is_nan($age_to_check);
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +64,39 @@ $test_age = is_nan($age_to_check);
         <div>OK</div>
     <?php } else { ?>
         <div>KO</div>
-    <?php } ?>    
+    <?php } ?>  
+    
+    
+
+    <?php if($test_mail_at === false || $test_mail_dot === false) {
+        $mail_error = 1;
+    } else {
+        $mail_error = 0;
+    } ?>
+    <?php if( $test_name < 3 ) {
+        $name_error = 1;
+     } else {
+        $name_error = 0;
+    } ?>
+    <?php if($test_age === false ) {
+        $age_error = 0;
+    } else {
+        $age_error = 1;
+    }   
+    ?>
+    <?php if (($mail_error + $name_error + $age_error) > 0 ) { ?>
+        <h1>accesso NON consentito</h1>
+    <?php }  else { ?>
+        <h1>accesso consentito</h1>
+        
+    <?php } ?>
+
+    <?php $total_error = $mail_error + $name_error + $age_error;
+    var_dump($mail_error);
+    var_dump($name_error);
+    var_dump($age_error);
+
+    var_dump($total_error); 
+    ?>
 </body>
 </html>
