@@ -60,7 +60,6 @@ $games = [
                 -
             <?php echo $this_game['visitingScore']; ?>
         </h3>
-       
     <?php } ?>
 </body>
 </html>
