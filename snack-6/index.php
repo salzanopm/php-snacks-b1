@@ -39,9 +39,6 @@ function calcolaMedia($nums) {
     }
     return $res/$qt;
   }
-
-  
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
