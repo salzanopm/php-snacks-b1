@@ -12,7 +12,6 @@ le partite con questo schema.
 Olimpia Milano - Cantù | 55-60  -->
 
 <!-- creo array di partite -->
-
 <?php
 $games = [
     [
