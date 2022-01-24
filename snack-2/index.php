@@ -47,27 +47,7 @@ $test_age = is_nan($age_to_check);
     <title>Document</title>
 </head>
 <body>
-    <h1>Controllo email</h1>
-    <?php if($test_mail_at === false || $test_mail_dot === false) { ?>
-        <div>KO</div>
-    <?php } else { ?>
-        <div>OK</div>
-    <?php } ?>
-    <h1>Controllo nome</h1>
-    <?php if( $test_name < 3 ) { ?>
-        <div>KO</div>
-    <?php } else { ?>
-        <div>OK</div>
-    <?php } ?>
-    <h1>Controllo età</h1>
-    <?php if($test_age === false ) { ?>
-        <div>OK</div>
-    <?php } else { ?>
-        <div>KO</div>
-    <?php } ?>  
     
-    
-
     <?php if($test_mail_at === false || $test_mail_dot === false) {
         $mail_error = 1;
     } else {
@@ -85,18 +65,19 @@ $test_age = is_nan($age_to_check);
     }   
     ?>
     <?php if (($mail_error + $name_error + $age_error) > 0 ) { ?>
-        <h1>accesso NON consentito</h1>
+        <h1>Accesso NON consentito</h1>
     <?php }  else { ?>
-        <h1>accesso consentito</h1>
+        <h1>Accesso consentito</h1>
         
     <?php } ?>
 
-    <?php $total_error = $mail_error + $name_error + $age_error;
+    <!-- test funzionamento logica -->
+    <!-- <?php $total_error = $mail_error + $name_error + $age_error;
     var_dump($mail_error);
     var_dump($name_error);
     var_dump($age_error);
 
     var_dump($total_error); 
-    ?>
+    ?> -->
 </body>
 </html>
