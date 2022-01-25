@@ -32,7 +32,7 @@ $test_name = strlen($name_to_check);
 
 // controllo età
 // se l'età inserita non è un numero.
-$test_age = is_nan($age_to_check);
+$test_age = is_numeric($age_to_check);
 
 ?>
 
@@ -53,15 +53,15 @@ $test_age = is_nan($age_to_check);
     } else {
         $mail_error = 0;
     } ?>
-    <?php if( $test_name < 3 ) {
+    <?php if( $test_name <= 3 ) {
         $name_error = 1;
      } else {
         $name_error = 0;
     } ?>
     <?php if($test_age === false ) {
-        $age_error = 0;
-    } else {
         $age_error = 1;
+    } else {
+        $age_error = 0;
     }   
     ?>
     <?php if (($mail_error + $name_error + $age_error) > 0 ) { ?>
@@ -72,11 +72,11 @@ $test_age = is_nan($age_to_check);
     <?php } ?>
 
     <!-- test funzionamento logica -->
-    <!-- <?php $total_error = $mail_error + $name_error + $age_error;
+    <?php $total_error = $mail_error + $name_error + $age_error;
     var_dump($mail_error);
     var_dump($name_error);
     var_dump($age_error);
     var_dump($total_error); 
-    ?> -->
+    ?> 
 </body>
 </html>

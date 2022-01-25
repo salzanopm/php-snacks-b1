@@ -41,7 +41,10 @@ $paragraph = 'È giunta l’ora di rimarginare le ferite.
     <?php for($i = 0; $i < count($new_paragraph); $i++) { ?>
         <?php $this_paragraph = $new_paragraph[$i]; ?>
         <h3>
-            <?php echo $this_paragraph; ?>
+            <?php if (!empty($this_paragraph)) { ?>
+                <?php echo $this_paragraph.'.'; ?>
+            <?php } ?>
+            
         </h3>
     <?php } ?>
     
